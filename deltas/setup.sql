@@ -22,11 +22,12 @@ CREATE TABLE device (
 CREATE TABLE user_device_log (
     `user_id` int,
     `device_id` int,
+    `return_by` int,
     `assigned_by` int,
-    `recived_by` int,
-    `comment` varchar (50),
     `assigned_at` datetime default now(),
+    `recived_by` int,
     `recived_at` datetime,
+    `comment` varchar (50),
     `status` tinyint (3) comment "1=assigned, 2=returned",
     INDEX (`user_id`),
     INDEX (`device_id`),
@@ -36,3 +37,5 @@ CREATE TABLE user_device_log (
     INDEX (`recived_at`),
     INDEX (`status`)
 ) ENGINE=MyISAM;
+
+-- INSERT INTO user (name, user_name, password, is_archived, is_admin) VALUES ('Hemant', 'hemant', '21232f297a57a5a743894a0e4a801fc3', 0, 1);
