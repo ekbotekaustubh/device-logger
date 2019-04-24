@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config.php';
+include 'config/config.php';
 
 if (!empty($_POST['userName']) && !empty($_POST['password'])) {
     $userName = $_POST['userName'];
@@ -13,7 +13,7 @@ if (!empty($_POST['userName']) && !empty($_POST['password'])) {
         $_SESSION['userName'] = $row['user_name'];
         $_SESSION['name'] = $row['name'];
 
-        header('location: dashboard.php');
+        header('location: DashboardController.php');
         exit;
     }
 
