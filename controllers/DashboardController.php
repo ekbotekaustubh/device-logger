@@ -8,6 +8,9 @@ class DashboardController extends Controller
 
     public function indexAction()
     {
+        $config = new Config();
+        $model = new Model($config->getConfig());
+
         echo 'in index action';
     }
 }
