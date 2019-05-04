@@ -8,4 +8,9 @@ class ErrorController extends Controller
     {
         parent::__construct();
     }
+
+    public function errorAction()
+    {
+
+    }
 }

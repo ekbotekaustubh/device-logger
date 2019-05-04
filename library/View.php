@@ -4,13 +4,20 @@
  */
 class View
 {
-    public function __construct()
+    /**
+     * Render view
+     *
+     * @param array $params
+     * @throws Exception
+     */
+    public function render(array $params)
     {
+        $filePath = sprintf('views/%s/%s.php', $params['controller'], $params['action']);
 
-    }
+        if (!file_exists($filePath)) {
+            throw new Exception('View file not found');
+        }
 
-    public function render($name)
-    {
-        require 'views/' . $name . '.php';
+        require $filePath;
     }
 }
