@@ -18,3 +18,8 @@ div.well{
     max-width: 400px;
     margin-top: 20%;
 }
+
+.created-by {
+    text-align: right;
+    padding: 10px 0;
+}

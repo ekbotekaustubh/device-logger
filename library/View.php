@@ -18,6 +18,8 @@ class View
             throw new Exception('View file not found');
         }
 
+        require 'layout/header.php';
         require $filePath;
+        require 'layout/footer.php';
     }
 }
